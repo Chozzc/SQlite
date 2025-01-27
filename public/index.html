@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <!-- 添加图标链接 -->
-    <link type="image/png" sizes="96x96" rel="icon" href="/birthday.png">
-    <script src="script.js"></script>
-    <!-- 修改网站标题 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>生日铭记馆</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link type="image/png" sizes="96x96" rel="icon" href="/birthday.png">
 </head>
 <body>
     <div class="jumbotron">
-        <h1>Birthdays</h1>
+        <h1><i class="fas fa-birthday-cake"></i> 生日铭记馆</h1>
+        <p>记录每一个重要的日子</p>
     </div>
     <div class="container">
         <div class="section">
             <div class="error_message" id="errorMessage"></div>
-            <h2>Add a Birthday</h2>
+            <h2><i class="fas fa-plus-circle"></i> 添加生日</h2>
             <form id="birthdayForm">
-                <input name="name" type="text" placeholder="Name" autocomplete="off" autofocus>
-                <input name="month" type="number" placeholder="Month" max="12" min="1" autocomplete="off">
-                <input name="day" type="number" placeholder="Day" max="31" min="1" autocomplete="off">
-                <input type="submit" value="Add Birthday">
+                <input name="name" type="text" placeholder="姓名" autocomplete="off" autofocus>
+                <input name="month" type="number" placeholder="月份" max="12" min="1" autocomplete="off">
+                <input name="day" type="number" placeholder="日期" max="31" min="1" autocomplete="off">
+                <input type="submit" value="添加">
             </form>
         </div>
 
         <div class="section">
-            <h2>All Birthdays</h2>
+            <h2><i class="fas fa-gift"></i> 所有生日</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Birthday</th>
+                        <th>姓名</th>
+                        <th>生日</th>
                     </tr>
                 </thead>
                 <tbody id="birthdayTableBody">
@@ -43,3 +44,60 @@
     <script src="script.js"></script>
 </body>
 </html>
+<!--新页面
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日铭记馆</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="jumbotron">
+        <h1><i class="fas fa-birthday-cake"></i> 生日铭记馆</h1>
+        <p>记录每一个重要的日子</p>
+    </div>
+
+    <div class="countdown-board">
+        <h3><i class="fas fa-clock"></i> 即将到来的生日</h3>
+        <div id="countdownContainer"></div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="error_message" id="errorMessage"></div>
+            <h2><i class="fas fa-plus-circle"></i> 添加生日</h2>
+            <form id="birthdayForm">
+                <input name="name" type="text" placeholder="姓名" required>
+                <input name="month" type="number" placeholder="月份" min="1" max="12" required>
+                <input name="day" type="number" placeholder="日期" min="1" max="31" required>
+                <input type="submit" value="添加">
+            </form>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-gift"></i> 所有生日</h2>
+                <button class="export-btn" onclick="exportToCSV()"><i class="fas fa-file-export"></i> 导出CSV</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>生日</th>
+                        <th>剩余天数</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="birthdayTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+-->

@@ -1,104 +1,203 @@
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
+/* 基础样式 */
 body {
-  background-color: #fff;
-  color: #212529;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
   margin: 0;
-  text-align: left;
+  padding: 0;
+  line-height: 1.6;
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center;
-  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .jumbotron {
-  background-color: #477bff;
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
-  margin-bottom: 2rem;
-  padding: 2rem 1rem;
+  padding: 60px 20px;
   text-align: center;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.jumbotron h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.jumbotron p {
+  font-size: 18px;
+  margin: 10px 0 0;
 }
 
 .section {
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section:hover {
-  background-color: #f5f5f5;
-  transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 48px;
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-button,
-input[type="submit"] {
-  background-color: #d9edff;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  font-size: 0.95rem;
-  font-weight: 400;
-  line-height: 1.5;
-  padding: 0.375rem 0.75rem;
-  text-align: center;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  vertical-align: middle;
+h2 i {
+  margin-right: 10px;
 }
 
 input[type="text"],
 input[type="number"] {
-  line-height: 1.8;
-  width: 25%;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: border-color 0.3s ease;
 }
 
-input[type="text"]:hover,
-input[type="number"]:hover {
-  background-color: #f5f5f5;
-  transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #fff;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #fff;
+  color: #667eea;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #f1f1f1;
 }
 
 table {
-  background-color: transparent;
-  margin-bottom: 1rem;
   width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 table th,
 table td {
-  padding: 0.75rem;
-  vertical-align: middle;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 tbody tr:nth-of-type(odd) {
-  background-color: rgb(179, 208, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .error_message {
-  color: red;
-  font-size: 1.5em;
+  color: #ff6b6b;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
+
+
+/* 新增样式
+.countdown-board {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto 30px;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.countdown-board h3 {
+  color: #fff;
+  margin: 0 0 15px;
+  font-size: 20px;
+}
+
+.countdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: rgba(255,255,255,0.05);
+  margin: 8px 0;
+  border-radius: 6px;
+}
+
+.export-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.export-btn:hover {
+  background: #45a049;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.zodiac {
+  font-size: 12px;
+  background: rgba(255,255,255,0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.actions button {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #ff4c4c;
+}
+
+.actions button.edit {
+  background-color: #667eea;
+}
+
+.actions button.edit:hover {
+  background-color: #5568c2;
+}
+ */
