@@ -1,20 +1,10 @@
 import express from 'express';
-import { createClient } from '@supabase/supabase-js';
-import apiRouter from './api.js';
-
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+import birthdaysRouter from '../routes/birthdays.js';
 
 const app = express();
 app.use(express.json());
 
-// 静态文件服务
-app.use(express.static('public'));
+// 关键修改：将路由挂载到 /api 前缀下
+app.use('/api', birthdaysRouter); // 这样 /api/birthdays 才能匹配
 
-// API 路由
-app.use('/api', apiRouter);
-
-// 启动服务器
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+export default app;
